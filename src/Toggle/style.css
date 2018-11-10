@@ -1,0 +1,54 @@
+.toggle-button {
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+}
+.toggle-button.locked {
+    cursor: initial;
+}
+.toggle-button.locked > .toggle-button-inner::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-image: url('./lock.png');
+  background-size: 10px 10px;
+}
+.toggle-button > .text {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 12px;
+}
+.toggle-button > .toggle-button-inner {
+   display: flex;
+   width: 40px;
+   height: 25px;
+   background: #E0E0E0;
+   border-radius: 18px;
+   position: relative;
+   transition: background .2s ease-in;
+}
+.toggle-button > .toggle-button-inner > .checkbox {
+  -webkit-appearance: checkbox;
+  display: none;
+}
+.toggle-button > .toggle-button-inner > .handle {
+  height: 16px;
+  width: 16px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.01);
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  transition: left .2s ease-in;
+}
+.toggle-button.checked > .toggle-button-inner {
+  background: #63D093;
+}
+.toggle-button.checked >.toggle-button-inner > .handle {
+  left: calc(100% - 21px);
+}
