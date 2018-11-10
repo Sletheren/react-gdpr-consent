@@ -1,6 +1,10 @@
 # REACT-GDPR-CONSENT [![Version](https://img.shields.io/npm/v/@sletheren/personalnumbergenerator.svg)](https://www.npmjs.com/package/@sletheren/react-gdpr-consent)
 
 A React component to make it easy to implement the General Data Protection Regulation (GDPR) into your React App
+## Online Demo
+
+You can check out this little demo to get the feel of it: [Online demo](https://sletheren.github.io/react-gdpr-consent/)
+
 ## Get started
 
 It's very easy to use the tool, follow the instructions
@@ -48,6 +52,8 @@ Explanation of the different properties of the configuration array:
 
 
 ### Pass `ToggleHanlder` and `linkHandler`:
+
+The two functions are mendatory to handle the toggle of the items and the link action handling
 
 Example:
 ````js
