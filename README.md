@@ -1,4 +1,4 @@
-# REACT-GDPR-CONSENT [![Version](https://img.shields.io/npm/v/@sletheren/personalnumbergenerator.svg)](https://www.npmjs.com/package/@sletheren/react-gdpr-consent)
+# REACT-GDPR-CONSENT [![Version](https://img.shields.io/npm/v/react-gdpr-consent.svg)](https://www.npmjs.com/package/react-gdpr-consent)
 
 A React component to make it easy to implement the General Data Protection Regulation (GDPR) into your React App
 ## Online Demo
