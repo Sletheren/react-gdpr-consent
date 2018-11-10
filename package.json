@@ -1,9 +1,17 @@
 {
   "name": "react-gdpr-consent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple component for your react app to implement the General Data Protection Regulation (GDPR) in a friendly-UI approach using toggles",
   "author": "Abdelghafour Rakhma",
-  "keywords": ["react", "GDPR", "consent", "Toggle", "General Data processing regulation", "javascript", "component"],
+  "keywords": [
+    "react",
+    "GDPR",
+    "consent",
+    "Toggle",
+    "General Data processing regulation",
+    "javascript",
+    "component"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
