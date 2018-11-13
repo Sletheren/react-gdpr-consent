@@ -3,6 +3,8 @@
 A React component to make it easy to implement the General Data Protection Regulation (GDPR) into your React App
 ## Online Demo
 
+![Screenshots](https://raw.githubusercontent.com/Sletheren/react-gdpr-consent/master/examples/src/example.gif)
+
 You can check out this little demo to get the feel of it: [Online demo](https://sletheren.github.io/react-gdpr-consent/)
 
 ## Get started
