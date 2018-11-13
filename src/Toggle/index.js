@@ -19,12 +19,14 @@ class Toggle extends React.Component {
     }))
   }
   render () {
+    const isChecked = this.state.checked;
+    const isLocked = this.props.locked;
     return (
-      <div className={"toggle-button " + (this.state.checked ? "checked" : "") + " " + (this.props.locked ? "locked" : "")} onClick={this.toggle}>
-        <div className="toggle-button-inner">
-          <span className="handle" />
-        </div>
-        { this.props.text && <p className="text">{this.props.text}</p> }
+      <div className="toggle" onClick={() => this.toggle()}>
+        <label className={"toggler toggler-small" + (isChecked ? " checked" : "") + (isLocked ? " locked" : "")} >
+          <span className="switch-left">Yes</span>
+          <span className="switch-right">No</span>
+        </label>
       </div>
     )
   }

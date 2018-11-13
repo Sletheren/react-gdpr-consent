@@ -1,54 +1,146 @@
-.toggle-button {
-  display: inline-block;
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+  outline: none;
+}
+
+.toggle {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  font-size: 100%;
+  display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
 }
-.toggle-button.locked {
-    cursor: initial;
+
+
+/* Switch starts here */
+.toggler {
+  display: inline-block;
+  position: relative;
+
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #eee;
 }
-.toggle-button.locked > .toggle-button-inner::after {
+
+.toggler-small {
+  font-size: 0.75em; /* Sizes the switch */
+}
+
+.toggler::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
-  background-image: url('./lock.png');
-  background-size: 10px 10px;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid #eee;
+  border-bottom: 0;
 }
-.toggle-button > .text {
-  font-family: Arial;
-  font-size: 14px;
-  line-height: 22px;
-  margin-left: 12px;
+
+.toggler input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.toggle-button > .toggle-button-inner {
-   display: flex;
-   width: 40px;
-   height: 25px;
-   background: #E0E0E0;
-   border-radius: 18px;
-   position: relative;
-   transition: background .2s ease-in;
-}
-.toggle-button > .toggle-button-inner > .checkbox {
-  -webkit-appearance: checkbox;
-  display: none;
-}
-.toggle-button > .toggle-button-inner > .handle {
-  height: 16px;
-  width: 16px;
-  background: #FFFFFF;
-  border-radius: 50px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.01);
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
   position: absolute;
-  left: 5px;
-  top: 5px;
-  transition: left .2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
 }
-.toggle-button.checked > .toggle-button-inner {
-  background: #63D093;
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
 }
-.toggle-button.checked >.toggle-button-inner > .handle {
-  left: calc(100% - 21px);
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: #fff;
 }
+.locked > .switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #929495;
+  color: #fff;
+}
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+.checked > .switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+.checked.locked > .switch-left {
+  background-color: #929495;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+.checked > .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+.checked > .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+.checked > .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
