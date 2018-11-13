@@ -1,6 +1,6 @@
 {
   "name": "react-gdpr-consent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple component for your react app to implement the General Data Protection Regulation (GDPR) in a friendly-UI approach using toggles",
   "author": "Abdelghafour Rakhma",
   "keywords": [
